@@ -76,6 +76,9 @@
         cacheQueryInput.value = '';
         window.open(googleUrl, "_self");
         window.location.href=googleUrl;
+      } else {
+        // put previous search query in the search input
+        document.getElementById('queryInput').value = cacheQueryInput.value;
       }
       return;
     }
