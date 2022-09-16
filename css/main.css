@@ -1005,9 +1005,55 @@ button {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%23999' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z'/%3e%3c/svg%3e");
 }
 
+.logo {
+  width: 150;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.logoTitleContainer {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.logoTitle {
+  font-family: monospace, monospace;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.whatplutodoesContainer {
+  text-align: center;
+  margin-top: 20px;
+  color: #2c3e50;
+}
+
+.whatplutodoes {
+  font-family: monospace, monospace;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.bottomSpacer {
+  height: 100px;
+}
+
 @media screen and (max-width: 992px) {
   .s131 form .inner-form .input-field {
     height: 60px;
+  }
+  .logo {
+    width: 150;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .bottomSpacer {
+    height: 150px;
   }
 }
 
@@ -1039,6 +1085,14 @@ button {
     margin-bottom: 0;
     width: 100%;
   }
+  .logo {
+    width: 150;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .bottomSpacer {
+    height: 200px;
+  }
 }
-
-/*# sourceMappingURL=Searchs_131.css.map */
