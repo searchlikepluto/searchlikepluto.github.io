@@ -70,11 +70,13 @@
                               window.performance.navigation.type === 2 );
     const cacheQueryInput = document.getElementById('cacheQueryInput');
     if ( historyTraversal && cacheQueryInput !== null && cacheQueryInput.value !== '') {
-      // redirect to Google Search
-      const googleUrl = 'https://google.com/search?q=' + cacheQueryInput.value;
-      cacheQueryInput.value = '';
-      window.open(googleUrl, "_self");
-      window.location.href=googleUrl;
+      if (confirm("Search it on Google?") === true) {
+        // redirect to Google Search
+        const googleUrl = 'https://google.com/search?q=' + cacheQueryInput.value;
+        cacheQueryInput.value = '';
+        window.open(googleUrl, "_self");
+        window.location.href=googleUrl;
+      }
       return;
     }
   });
