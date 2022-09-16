@@ -8,7 +8,11 @@
   </head>
   <body>
     <div class="s131">
-      <form id="queryForm" autocomplete="off" onsubmit="return duckduckgo();" method="GET" action="https://duckduckgo.com">
+      <form id="queryForm" autocomplete="off" onsubmit="return privacyfriendlysearch();" method="GET" action="">
+        <img class="logo" src="assets/logo.png">
+        <div class="logoTitleContainer">
+          <text class="logoTitle">Pluto Search 🐶</text>
+        </div>
         <div class="inner-form">
           <div class="input-field first-wrap">
             <input id="queryInput" name="q" type="text" placeholder="What are you looking for?" autocomplete="off" />
@@ -17,20 +21,36 @@
             <input type="submit" class="btn-search" type="button" value="SEARCH">
           </div>
         </div>
+        <div class="whatplutodoesContainer">
+          <text class="whatplutodoes">Pluto searches on Privacy Friendly Search Engines for you.</text>
+          <br/><br/>
+          <text class="whatplutodoes">Not finding what you are looking for? Just press back button and Pluto will search it for you on Google.</text>
+        </div>
+        <div class="bottomSpacer"></div>
       </form>
     </div>
     <form name="ignore_me">
       <input type="hidden" id="cacheQueryInput" value="" />
     </form>
     <script>
-    function duckduckgo() {
+
+    function privacyfriendlysearch() {
       const queryInput = document.getElementById('queryInput');
       if (queryInput === null || queryInput.value === '') {
         alert("Pluto can't sniff the web if you don't tell him what you are looking for..");
         return false;
       }
+
+      const privacyFriendlySearchEngines = [
+        "https://www.startpage.com/sp/search",
+        "https://www.qwant.com/",
+        "https://duckduckgo.com/"
+      ];
+      const randomIndex = Math.floor(Math.random() * privacyFriendlySearchEngines.length);
+
       const cacheQueryInput = document.getElementById('cacheQueryInput');
       cacheQueryInput.value = queryInput.value;
+      document.getElementById('queryForm').action = privacyFriendlySearchEngines[randomIndex];
       document.getElementById('queryForm').submit();
     }
     window.addEventListener( "pageshow", function ( event ) {
