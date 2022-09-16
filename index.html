@@ -69,6 +69,7 @@
                          ( typeof window.performance != "undefined" &&
                               window.performance.navigation.type === 2 );
     const cacheQueryInput = document.getElementById('cacheQueryInput');
+    document.getElementById('queryInput').value = cacheQueryInput.value;
     if ( historyTraversal && cacheQueryInput !== null && cacheQueryInput.value !== '') {
       if (confirm("Search it on Google?") === true) {
         // redirect to Google Search
@@ -76,9 +77,6 @@
         cacheQueryInput.value = '';
         window.open(googleUrl, "_self");
         window.location.href=googleUrl;
-      } else {
-        // put previous search query in the search input
-        document.getElementById('queryInput').value = cacheQueryInput.value;
       }
       return;
     }
