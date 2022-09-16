@@ -824,7 +824,7 @@ button {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Poppins', sans-serif;
-  background: url("../images/Search_131.png");
+  background: url("../assets/Search_131.png");
   background-size: cover;
   background-position: center center;
   padding: 15px;
