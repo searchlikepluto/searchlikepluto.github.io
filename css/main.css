@@ -331,6 +331,10 @@ textarea {
   overflow: auto;
 }
 
+a {
+  color: #2c3e50;
+}
+
 /**
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
